@@ -1,37 +1,27 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Cursor Settings
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=black
 
-"call vundle#begin('~/some/path/here')
+highlight Cursor guifg=black guibg=white
+highlight iCursor guifg=black guibg=white
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:block100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait0
 
+" Disabling Cursor Blinking
+" Disable all blinking:
+set guicursor+=a:blinkon0
 
-Plugin 'tpope/vim-fugitive'
-" Plugin 'git://git.wincent.com/command-t.git'
-" Plugin 'file:///home/gmarik/path/to/plugin'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'junegunn/goyo.vim'
+" Remove previous setting:
+":set guicursor-=a:blinkon0
 
-call vundle#end()            " required
+" Restore default setting:
+":set guicursor&
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
@@ -61,7 +51,7 @@ filetype plugin indent on    " required
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
-set paste
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -175,7 +165,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme default
 catch
 endtry
 
@@ -449,11 +439,11 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
-colorscheme happy_hacking
-colorscheme hybrid
+set number
+colorscheme default
 
 if has("gui_running")
-  set guifont=Consolas:h12:cANSI:qDRAFT
+  set guifont=Consolas:h11:cANSI:qDRAFT
 endif
 
 
@@ -479,6 +469,7 @@ endtry
 " => Command mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Smart mappings on the command line
+set paste
 cno $h e ~/
 cno $d e ~/Desktop/
 cno $j e ./
