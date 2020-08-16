@@ -11,7 +11,7 @@ hi clear Normal
 set bg&
 
 " Remove all existing highlighting and set the defaults.
-hi clear
+" hi clear
 
 " Load the syntax highlighting defaults, if it's enabled.
 if exists("syntax_on")
