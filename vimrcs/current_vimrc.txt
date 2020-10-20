@@ -1,7 +1,7 @@
 call plug#begin('C:\.vim\plugged')
 Plug 'frazrepo/vim-rainbow'
-Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
+Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdcommenter'
 call plug#end()
 
@@ -10,10 +10,20 @@ set laststatus=2
 set noshowmode
 
 " Set lightline theme (powerline is default)
+" let g:lightline = {'colorscheme': 'powerline',}
 " let g:lightline = {'colorscheme': 'wombat',}
+" let g:lightline = {'colorscheme': 'jellybeans',}
+" let g:lightline = {'colorscheme': 'solarized dark',}
+" let g:lightline = {'colorscheme': 'solarized light',}
+" let g:lightline = {'colorscheme': 'PaperColor dark',}
+" let g:lightline = {'colorscheme': 'PaperColor light',}
+" let g:lightline = {'colorscheme': 'seoul256',}
+" let g:lightline = {'colorscheme': 'one dark',}
+" let g:lightline = {'colorscheme': 'one light',}
+" let g:lightline = {'colorscheme': 'landscape',}
 
 
-cd F:\JD\Programs
+cd E:\JK\Dev
 map <C-n> :NERDTreeToggle<CR>
 " open Nerd Tree in folder of file in active buffer
 map <Leader>nt :NERDTree %:p:h<CR>
@@ -85,7 +95,7 @@ set incsearch
 set termguicolors
 set scrolloff=8
 set noshowmode
-
+:colorscheme default
 " Give more space for displaying messages.
 set cmdheight=2
 
@@ -148,6 +158,13 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copying and Pasting
+vnoremap <C-c> "+y
+map <C-v> "+P
+
+" Linux
+" vnoremap <C-c> "+y :let @+=@*<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
