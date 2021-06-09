@@ -1,5 +1,5 @@
-# vim color schemes
-# Assuming you're windows user I don't know about linux or Mac
+# Vim color schemes
+# Assuming you're windows user I don't know about Linux or Mac
 
 This is just some colors and vimrc's file for vim
 
